@@ -1,23 +1,29 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Appointment from "./pages/Appointment/Appointment/Appointment";
 import Home from "./pages/Home/Home/Home";
+import Login from "./pages/Login/Login/Login";
+import Register from "./pages/Login/Register/Register";
 
 function App() {
   return (
-    <div>
+    <>
       <Router>
         <Switch>
-          <Route path="/about">
-            <Home />
+          <Route path="/appointment">
+            <Appointment />
           </Route>
-          <Route path="/users">
-            <Home />
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
 
